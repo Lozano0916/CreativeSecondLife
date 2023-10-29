@@ -51,7 +51,7 @@
 				</ul>
 				<ul class="header-links pull-right">
 					<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-					<li><a href="#"><i class="fa fa-user-o"></i> Cuenta</a></li>
+					<li><a href="{% url 'login' %}"><i class="fa fa-user-o"></i> Cuenta</a></li>
 				</ul>
 			</div>
 		</div>
@@ -66,7 +66,7 @@
 					<!-- LOGO -->
 					<div class="col-md-3">
 						<div class="header-logo">
-							<a href="#" class="logo">
+							<a href="{% url 'inicio' %}" class="logo">
 								<img src="{% static 'img/logo2.png' %}" alt="" width="210px" height="60px">
 							</a>
 						</div>
@@ -82,7 +82,7 @@
 									<option value="1">Category 01</option>
 									<option value="1">Category 02</option>
 								</select>
-								<input class="input" placeholder="Search here">
+								<input class="input" placeholder="Buscar">
 								<button class="search-btn">Buscar</button>
 							</form>
 						</div>
@@ -92,6 +92,16 @@
 					<!-- ACCOUNT -->
 					<div class="col-md-3 clearfix">
 						<div class="header-ctn">
+
+							<!-- Wishlist -->
+							<div>
+								<a href="{% url 'login' %}">
+									<i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+									<span>Vender</span>
+								</a>
+							</div>
+							<!-- /Wishlist -->
+
 
 							<!-- Cart -->
 							<div class="dropdown">
@@ -164,7 +174,7 @@
 			<div id="responsive-nav">
 				<!-- NAV -->
 				<ul class="main-nav nav navbar-nav">
-					<li class="active"><a href="#">Inicio</a></li>				
+					<li class="active"><a href="{% url 'inicio' %}">Inicio</a></li>				
 					<li><a href="#">Sillas</a></li>
 					<li><a href="#">Mesas</a></li>
 					<li><a href="#">Cogines</a></li>
@@ -369,7 +379,7 @@
 								</div>
 								<div class="product-body">
 									<p class="product-category">Category</p>
-									<h3 class="product-name"><a href="#">product name goes here</a></h3>
+									<h3 class="product-name"><a href="{% url 'product' %}">product name goes here</a></h3>
 									<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									<div class="product-rating">
 										<i class="fa fa-star"></i>
@@ -779,6 +789,7 @@
 	<!-- /FOOTER -->
 
 	<!-- jQuery Plugins -->
+	<script src="https://kit.fontawesome.com/6e6a67c425.js" crossorigin="anonymous"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/slick.min.js"></script>
